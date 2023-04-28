@@ -1,32 +1,34 @@
+// This "includes" only works on the CC50 IDE. 
+// https://code.cs50.io/ <-- Link 
 #include <stdio.h>
 #include <cs50.h>
 #include <math.h>
 
 int get_cents(void);
-int calculate_quarters(int cents);
-int calculate_dimes(int cents);
-int calculate_nickels(int cents);
-int calculate_pennies(int cents);
+int calc_quarters(int cents);
+int calc_dimes(int cents);
+int calc_nickels(int cents);
+int calc_pennies(int cents);
 
 int main(void)
 {
     // Ask how many cents the customer is owed
     int cents = get_cents();
 
-    // Calculate the number of quarters to give the customer
-    int quarters = calculate_quarters(cents);
+    // calculates the number of quarters to give the customer
+    int quarters = calc_quarters(cents);
     cents = cents - quarters * 25;
 
-    // Calculate the number of dimes to give the customer
-    int dimes = calculate_dimes(cents);
+    // calculates the number of dimes to give the customer
+    int dimes = calc_dimes(cents);
     cents = cents - dimes * 10;
 
-    // Calculate the number of nickels to give the customer
-    int nickels = calculate_nickels(cents);
+    // calculates the number of nickels to give the customer
+    int nickels = calc_nickels(cents);
     cents = cents - nickels * 5;
 
-    // Calculate the number of pennies to give the customer
-    int pennies = calculate_pennies(cents);
+    // calculates the number of pennies to give the customer
+    int pennies = calc_pennies(cents);
     cents = cents - pennies * 1;
 
     // Sum coins
@@ -48,7 +50,7 @@ int get_cents(void)
     return cents;
     }
 
-int calculate_quarters(int cents)
+int calc_quarters(int cents)
 {
     // Function calculates how many quarters a customer should be given if they're owed some number of cents
     int count = 0;
@@ -59,7 +61,7 @@ int calculate_quarters(int cents)
     }
     return count;
 }
-int calculate_dimes(int cents)
+int calc_dimes(int cents)
 {
     // Function calculates how many dimes a customer should be given if they're owed some number of cents
     int count = 0;
@@ -70,7 +72,7 @@ int calculate_dimes(int cents)
     }
     return count;
 }
-int calculate_nickels(int cents)
+int calc_nickels(int cents)
 {
     // Function calculates how many quarters a customer should be given if they're owed some number of cents
     int count = 0;
@@ -81,7 +83,7 @@ int calculate_nickels(int cents)
     }
     return count;
 }
-int calculate_pennies(int cents)
+int calc_pennies(int cents)
 {
     // Function calculates how many dimes a customer should be given if they're owed some number of cents
     int count = 0;

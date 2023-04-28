@@ -1,3 +1,5 @@
+// This "includes" only works on the CC50 IDE. 
+// https://code.cs50.io/ <-- Link 
 #include <stdio.h>
 #include <cs50.h>
 
