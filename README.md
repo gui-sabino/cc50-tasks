@@ -1,2 +1,3 @@
-# cc50-tasks
-Tasks from the CC50 course
+# CC50 TASKS
+
+This repo is destinated for the CC50 tasks I'm doing.
